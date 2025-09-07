@@ -1,0 +1,268 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #9954d5, #6c3483);
+  color: #fff;
+}
+
+
+nav {
+  background: #9954d5; 
+  padding: 12px 20px;
+  display: flex;
+  gap: 15px;
+}
+
+nav button {
+  background: #9954d5; 
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+nav button:hover {
+  background: #7e3fc0;
+}
+
+
+main {
+  padding: 25px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: white;
+}
+
+.stats {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  background: white; 
+  padding: 30px 20px;
+  border-radius: 12px;
+  flex: 1;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #000;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background: #f3e9ff; 
+}
+
+table.dataTable {
+  width: 100% !important;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 15px;
+  color: #000;
+}
+#usersTable tr, #postsTable tr { 
+    background-color: #ffffff; } 
+    #usersTable tr:nth-child(even),
+     #postsTable tr:nth-child(even) { 
+     background-color: #f5f6fa; }
+
+table.dataTable thead {
+  background: #9954d5; 
+  color: white;
+}
+
+table.dataTable th,
+table.dataTable td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+
+#usersTable td:nth-child(1), 
+#usersTable th:nth-child(1) {
+    width: 200px;
+}
+
+#usersTable td:nth-child(4), 
+#usersTable th:nth-child(4) {
+    width: 150px;
+    text-align: center;
+}
+
+
+#postsTable td:nth-child(1), 
+#postsTable th:nth-child(1) {
+    width: 60px;
+    text-align: center;
+}
+
+#postsTable td:nth-child(4), 
+#postsTable th:nth-child(4) {
+    width: 140px;
+    text-align: center;
+}
+
+
+.viewBtn,
+.editBtn,
+.deleteBtn,
+.viewCommentsBtn {
+  border: none;
+  background: none;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 0 5px;
+  transition: transform 0.2s;
+  color: #000;
+}
+
+.viewBtn:hover,
+.editBtn:hover,
+.deleteBtn:hover,
+.viewCommentsBtn:hover {
+  transform: scale(1.2);
+  color: #9954d5;
+}
+
+/* Favorites */
+.favBtn {
+  cursor: pointer;
+  font-size: 20px;
+  margin-left: 8px;
+  transition: transform 0.2s;
+}
+
+.favBtn:hover {
+  transform: scale(1.2);
+}
+
+.favorite { color: gold; }
+.not-favorite { color: #ccc; }
+
+
+#usersTable td:last-child,
+#postsTable td:last-child {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: inherit;
+}
+
+
+#searchPosts {
+  padding: 8px 12px;
+  width: 250px;
+  margin-right: 10px;
+  border: 1px solid #fff;
+  border-radius: 6px;
+}
+
+#addPostBtn {
+  background: #9954d5; 
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#addPostBtn:hover {
+  background: #7e3fc0;
+}
+
+
+table.dataTable thead th {
+  color: #fff !important;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+
+.dataTables_length select {
+  color: black !important;   
+  background-color: white !important; 
+  border: 1px solid #ccc !important;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+#loader {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #ccc;
+  border-top-color: #9954d5;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Light/Dark Mode */
+body.dark {
+  background: #121212;
+  color: #eee;
+}
+
+body.dark nav {
+  background: #222;
+}
+
+body.dark nav button {
+  background: #333;
+  color: #eee;
+}
+
+body.dark .card {
+  background: #1e1e1e;
+  color: #eee;
+}
+
+body.dark table.dataTable {
+  color: #000;
+}
+
+body.dark table.dataTable thead {
+  background: #333;
+}
+body.dark table.dataTable thead th {
+  color: #000 !important;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+
+
+

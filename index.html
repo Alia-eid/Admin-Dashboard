@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Admin Dashboard</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- DataTables -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+  <!-- Toastr -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+ <!-- Loader -->
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+  <!-- Navbar -->
+  <nav>
+    <button id="tab-dashboard">Dashboard</button>
+    <button id="tab-users">Users</button>
+    <button id="tab-posts">Posts</button>
+    <button id="toggleTheme"><i class="fa fa-adjust"></i></button>
+
+  </nav>
+
+  <!-- Sections -->
+  <main>
+    <section id="dashboard" class="tab-content">
+      <h2>Dashboard</h2>
+      <div class="stats">
+        <div class="card" id="usersCount">Users: ...</div>
+        <div class="card" id="postsCount">Posts: ...</div>
+        <div class="card" id="commentsCount">Comments: ...</div>
+      </div>
+    </section>
+
+    <section id="users" class="tab-content" style="display:none;">
+      <h2>Users</h2>
+      <table id="usersTable" class="display" style="width:100%">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Company</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section id="posts" class="tab-content" style="display:none;">
+      <h2>Posts</h2>
+      <!-- Search -->
+      <input type="text" id="searchPosts" placeholder="Search posts...">
+      <!-- Add Post -->
+      <button id="addPostBtn"><i class="fa fa-plus"></i> Add Post</button>
+
+      <table id="postsTable" class="display" style="width:100%">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Body</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>
