@@ -11,7 +11,7 @@ It allows managing Users and Posts with interactive tables, search, and actions.
 - Loader while fetching data  
 - Light/Dark Mode support  
 
-## 🛠Technologies Used
+## Technologies Used
 - HTML5, CSS3, JavaScript  
 - jQuery  
 - DataTables.js  
